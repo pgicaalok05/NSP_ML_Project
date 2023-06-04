@@ -11,6 +11,11 @@ matplotlib
 pandas
 flasgger
 streamlit
+streamlit_metrics
+markdown
+hydralit_components
+hydralit
+millify
 
 
 
