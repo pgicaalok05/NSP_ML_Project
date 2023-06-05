@@ -10,8 +10,8 @@ pickle_in = open("NSP_Creditcardfrauddetection.pkl","rb")
 model=pickle.load(pickle_in)
 #dataset= pd.read_csv('/content/drive/My Drive/Colab Notebooks/Dataset/card_transdata.csv')
 #X = dataset.iloc[:, 0:8].values
-#from sklearn.preprocessing import StandardScaler
-#sc = StandardScaler()
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
 #X = sc.fit_transform(X)
 def predict_note_authentication(distance_from_home, distance_from_last_transaction, ratio_to_median_purchase_price, repeat_retailer, used_chip, used_pin_number, online_order):
   output= model.predict(sc.transform([[distance_from_home, distance_from_last_transaction, ratio_to_median_purchase_price, repeat_retailer, used_chip, used_pin_number, online_order]]))
