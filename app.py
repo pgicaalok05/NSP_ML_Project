@@ -8,13 +8,13 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 # Load the pickled model
 pickle_in = open("NSP_Creditcardfrauddetection.pkl","rb")
 model=pickle.load(pickle_in)
-dataset= pd.read_csv('card_transdata.csv')
-X = dataset.iloc[:, [0,1,2,3,4,5,6]].values
+#dataset= pd.read_csv('card_transdata.csv')
+#X = dataset.iloc[:, [0,1,2,3,4,5,6]].values
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
-X = sc.fit_transform(X)
+#X = sc.fit_transform(X)
 def predict_note_authentication(distance_from_home, distance_from_last_transaction, ratio_to_median_purchase_price, repeat_retailer, used_chip, used_pin_number, online_order):
-  output= model.predict(sc.transform([[distance_from_home, distance_from_last_transaction, ratio_to_median_purchase_price, repeat_retailer, used_chip, used_pin_number, online_order]]))
+  output= model.predict([[distance_from_home, distance_from_last_transaction, ratio_to_median_purchase_price, repeat_retailer, used_chip, used_pin_number, online_order]])
   print("Fraud", output)
   if output==[1]:
     prediction="It is a Fraud"
