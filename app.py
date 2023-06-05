@@ -9,7 +9,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 pickle_in = open("NSP_Creditcardfrauddetection.pkl","rb")
 model=pickle.load(pickle_in)
 dataset= pd.read_csv('card_transdata.csv')
-X = dataset.iloc[:, [0:8]].values
+X = dataset.iloc[:, [0,1,2,3,4,5,6]].values
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X = sc.fit_transform(X)
