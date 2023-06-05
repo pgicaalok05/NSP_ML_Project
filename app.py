@@ -14,7 +14,7 @@ from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 #X = sc.fit_transform(X)
 def predict_note_authentication(distance_from_home, distance_from_last_transaction, ratio_to_median_purchase_price, repeat_retailer, used_chip, used_pin_number, online_order):
-  output= model.predict([[sc.transform([[distance_from_home, distance_from_last_transaction, ratio_to_median_purchase_price, repeat_retailer, used_chip, used_pin_number, online_order]])]])
+  output= model.predict([[distance_from_home, distance_from_last_transaction, ratio_to_median_purchase_price, repeat_retailer, used_chip, used_pin_number, online_order]])
   print("Fraud", output)
   if output==[1]:
     prediction="It is a Fraud"
