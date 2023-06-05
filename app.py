@@ -50,7 +50,7 @@ def main():
       result=predict_note_authentication(distance_from_home, distance_from_last_transaction, ratio_to_median_purchase_price, repeat_retailer, used_chip, used_pin_number, online_order)
       st.success('Model has detected {}'.format(result))
     if st.button("About"):
-      st.subheader("Developed by Team(Alok Raj*, Aditya Burman, Mahi Ajay")
+      st.subheader("Developed by Team(Alok Raj*, Aditya Barman, Mahi Ajay")
       st.subheader("Student , Department Artificial Intelligence and Data Science")
 
 if __name__=='__main__':
