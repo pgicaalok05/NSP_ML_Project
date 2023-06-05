@@ -37,7 +37,7 @@ def main():
    """
     st.markdown(html_temp,unsafe_allow_html=True)
     st.header("Credi Card Fraud Detection")
-    distance_from_home = st.number_input("Distance From Home","")
+    distance_from_home = st.number_input("Distance From Home")
     distance_from_last_transaction = st.number_input("Distance From Last Transaction") 
     ratio_to_median_purchase_price = st.number_input("Ratio to Median Purchase Price")
     repeat_retailer = st.number_input("Repeat Retailer")
